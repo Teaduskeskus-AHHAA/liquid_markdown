@@ -57,7 +57,7 @@ module LiquidMarkdown
           :virtual_path => virtual_path(record.path, record.partial)
       }
 
-      ActionView::Template.new(source, identifier, handler, details)
+      ActionView::Template.new(source, identifier, handler,:locals => [], details)
     end
 
     # Build path with eventual prefix
