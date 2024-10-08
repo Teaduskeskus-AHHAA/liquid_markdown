@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module LiquidMarkdown
   class Resolver < ActionView::Resolver
     require 'singleton'
