@@ -30,7 +30,7 @@ module LiquidMarkdown
 
     class LIQMD
      def self.call(template, source)
-        if template.formats.include?(:html)
+        if template.format == :html
           "LiquidMarkdown::TemplateHandler.render(#{template.source.inspect}, self, :html)"
         else
           "LiquidMarkdown::TemplateHandler.render(#{template.source.inspect}, self, :text)"
