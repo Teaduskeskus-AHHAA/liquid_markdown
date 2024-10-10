@@ -24,7 +24,7 @@ module LiquidMarkdown
           .instance_variable_get(:@_assigns)
           .each_with_object({}) do |(name, value), buffer|
         next if name.start_with?(UNDERSCORE)
-        buffer[name.to_sym] = value
+        buffer[name.to_sym] = value.to_sym
       end
     end
 
