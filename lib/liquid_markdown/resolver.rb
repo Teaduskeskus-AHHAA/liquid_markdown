@@ -52,12 +52,12 @@ module LiquidMarkdown
       handler = ActionView::Template.registered_template_handler(record.handler)
 
       details = {
-          :format => Mime[format],
-          :updated_at => record.updated_at,
-          :virtual_path => virtual_path(record.path, record.partial)
+    
       }
 
-      ActionView::Template.new(source, identifier, handler,:locals => [], details)
+      ActionView::Template.new(source, identifier, handler,:locals => [],       :format => Mime[format],
+          :updated_at => record.updated_at,
+          :virtual_path => virtual_path(record.path, record.partial))
     end
 
     # Build path with eventual prefix
