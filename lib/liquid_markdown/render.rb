@@ -31,7 +31,7 @@ module LiquidMarkdown
     def liquidize
       t = Liquid::Template.parse(@template)
       s = t.render(@liquid_hash, @liquid_settings, global_filter: @global_filter_proc)
-      puts @liquid_hash
+      puts @liquid_hash.inspect
       puts t.errors
       s
     end
