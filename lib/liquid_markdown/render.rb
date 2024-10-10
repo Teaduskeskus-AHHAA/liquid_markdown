@@ -29,8 +29,10 @@ module LiquidMarkdown
     end
 
     def liquidize
-      Liquid::Template.parse(@template)
+      t = Liquid::Template.parse(@template)
           .render(@liquid_hash, @liquid_settings, global_filter: @global_filter_proc)
+      puts t.errors
+      t
     end
 
     def insert_into_template(rendered_content)
