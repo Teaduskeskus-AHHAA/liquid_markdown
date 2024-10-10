@@ -55,7 +55,7 @@ module LiquidMarkdown
     
       }
 
-      ActionView::Template.new(source, identifier, handler,:locals => [],       :format => Mime[format],
+      ActionView::Template.new(source, identifier, handler,:locals => [],       :format => Mime[format].to_sym,
           :virtual_path => virtual_path(record.path, record.partial))
     end
 
