@@ -21,7 +21,7 @@ module LiquidMarkdown
 
     def text
       rendered_content = markdown(liquidize)
-      rendered_content.to_plain_text
+      rendered_content
     end
 
     def markdown(template_value)
