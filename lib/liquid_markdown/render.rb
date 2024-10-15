@@ -16,7 +16,7 @@ module LiquidMarkdown
 
     def html
       rendered_content = markdown(liquidize)
-      insert_into_template(rendered_content.to_html)
+      insert_into_template(rendered_content)
     end
 
     def text
