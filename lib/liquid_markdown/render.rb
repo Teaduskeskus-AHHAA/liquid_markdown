@@ -7,7 +7,7 @@ module LiquidMarkdown
     attr_accessor :markdown_settings, :liquid_settings
 
     def initialize(template, liquid_hash={})
-      @template = template.gsub(/<figcaption.*?<\/figcaption>/m, empty)
+      @template = template.gsub(/<figcaption.*?<\/figcaption>/m, "")
       @liquid_hash = liquid_hash
       @markdown_settings = {auto_ids: false, parse_block_html: true}
       @liquid_settings = {strict_filters: true, strict_variables: true}
