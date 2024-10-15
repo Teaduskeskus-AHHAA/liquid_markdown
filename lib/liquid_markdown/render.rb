@@ -25,7 +25,7 @@ module LiquidMarkdown
     end
 
     def markdown(template_value)
-      Kramdown::Document.new(template_value, @markdown_settings)
+      template_value
     end
 
     def liquidize
