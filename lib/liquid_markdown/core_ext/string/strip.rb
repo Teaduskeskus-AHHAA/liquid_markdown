@@ -8,7 +8,7 @@ class String
     empty = ''.freeze
     self.to_s
         .gsub(/<script.*?<\/script>/m, empty)
-         .gsub(/<figaption.*?<\/figcaption>/m, empty)
+         .gsub(/<figcaption.*?<\/figcaption>/m, empty)
         .gsub(/<!--.*?-->/m, empty)
         .gsub(/<style.*?<\/style>/m, empty)
         .gsub(/<.*?>/m, empty)
