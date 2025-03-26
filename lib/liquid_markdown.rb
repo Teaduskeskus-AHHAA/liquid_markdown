@@ -18,4 +18,4 @@ module LiquidMarkdown
 end
 
 ActionView::Template.register_template_handler :liqmd, LiquidMarkdown::TemplateHandler::LIQMD
-Liquid::Environment.register_filter(TextFilter)
+#Liquid::Environment.register_filter(TextFilter)
